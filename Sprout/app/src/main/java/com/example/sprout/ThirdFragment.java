@@ -1,5 +1,7 @@
 package com.example.sprout;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
@@ -12,14 +14,21 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.fragment.NavHostFragment;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class ThirdFragment extends Fragment {
+
+    private Spinner selectDropdown;
+    public static String typeSelection; //store selection
 
     @Override
     public View onCreateView(
@@ -42,5 +51,19 @@ public class ThirdFragment extends Fragment {
             }
         });
 
+        selectDropdown = getView().findViewById(R.id.selectDropdown);
+        List<String> firstQuestion = new ArrayList<>();
+        Collections.addAll(firstQuestion, MainActivity.plantTypes);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, firstQuestion);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        selectDropdown.setAdapter(adapter);
+
     }
+
+    public void getAnswer(View v){
+        typeSelection = (String) selectDropdown.getSelectedItem();
+
+    }
+
 }

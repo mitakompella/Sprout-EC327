@@ -15,7 +15,8 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //update this variable when brand new plant types are added to the database. not necessary for new plant inputs.
+    public static String[] plantTypes = {"Succulents", "House Plants"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
