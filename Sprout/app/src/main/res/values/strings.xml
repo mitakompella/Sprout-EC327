@@ -15,4 +15,6 @@
     <string name="Plant_Diagnosis">Plant Diagnosis</string>
     <string name="Pothos">Pothos</string>
     <string name="Chooseyourplant">Learn about your plant!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
