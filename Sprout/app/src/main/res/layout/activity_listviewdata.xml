@@ -19,7 +19,7 @@
         android:id="@+id/plantinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/pothosinfo" />
+        android:src="@drawable/pothosinfo2" />
 
     <ImageView
         android:id="@+id/images"
