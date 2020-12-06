@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/plantbackquizpage">
+    android:background="@drawable/plantback">
 
     <Button
         android:id="@+id/submit"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Back"
         android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/tan"
+        android:backgroundTint="@color/yellow"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
 
 
         <Spinner
-            android:id="@+id/selectDropdown"
+            android:id="@+id/selectDropdown3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -64,8 +64,6 @@
         android:onClick="getAnswer"
         android:text="Next"
         app:iconTint="#FFFFFF"
-        android:backgroundTint="@color/tan"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.90"

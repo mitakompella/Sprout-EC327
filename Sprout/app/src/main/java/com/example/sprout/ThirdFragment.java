@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,7 +30,7 @@ import java.util.List;
 public class ThirdFragment extends Fragment {
 
     private Spinner selectDropdown;
-    public static String typeSelection; //store selection
+    public static String typeSelection; //stores type selection
 
     @Override
     public View onCreateView(
@@ -42,19 +44,27 @@ public class ThirdFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        //clicking back takes us back to the previous fragment
         view.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment.this)
                         .navigate(R.id.action_ThirdFragment_to_SecondFragment);
+        }
+        });
+        //clicking "next" saves selection and takes us to next fragment
+        view.findViewById(R.id.firstNext).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getAnswer(view);
+                NavHostFragment.findNavController(ThirdFragment.this).navigate((R.id.action_ThirdFragment_to_ThirdFragment2));
             }
         });
 
+       //first question
         selectDropdown = getView().findViewById(R.id.selectDropdown);
         List<String> firstQuestion = new ArrayList<>();
         Collections.addAll(firstQuestion, MainActivity.plantTypes);
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, firstQuestion);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         selectDropdown.setAdapter(adapter);
@@ -63,7 +73,6 @@ public class ThirdFragment extends Fragment {
 
     public void getAnswer(View v){
         typeSelection = (String) selectDropdown.getSelectedItem();
-
     }
 
 }
