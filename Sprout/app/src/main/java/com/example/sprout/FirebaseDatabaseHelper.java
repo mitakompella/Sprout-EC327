@@ -27,7 +27,7 @@ public class FirebaseDatabaseHelper extends Application {
 
     public interface DataStatus{
         void PlantDataIsLoaded(List<Plant> plants, List<String> keys);
-        void SympDataIsLoaded(List<Symptoms> symptoms, List<String> keys);
+        void SympDataIsLoaded(List<Symptoms> thesymptoms, List<String> keys);
         void DataIsInserted();
         void DataIsUpdated();
         void DataIsDeleted();

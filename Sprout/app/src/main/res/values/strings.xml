@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sprout</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="third_fragment_label">Third Fragment</string>
+    <string name="third_fragment2_label">Third Fragment2</string>
+    <string name="third_fragment3_label">Third Fragment2</string>
+    <string name="next">Next</string>
+    <string name="Back">Back</string>
+    <string name="SPROUT">SPROUT</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Add">Add</string>
+    <string name="Plant_Diagnosis">Plant Diagnosis</string>
+    <string name="Pothos">Pothos</string>
+    <string name="Chooseyourplant">Learn about your plant!</string>
+    <string name="questionText" />
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question3">What seems to be wrong with the plant?</string>
+    <string name="answerPrompt">Select your answer here:</string>
+    <string name="question2">What species is the plant?</string>
+    <string name="question1">What type of plant is it?</string>
+</resources>
