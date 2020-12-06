@@ -4,24 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/plantback"
+    android:background="@drawable/plantbackg"
     tools:context=".FirstFragment">
 
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dancing_script"
+        android:layout_marginTop="296dp"
+        android:fontFamily="@font/advent_pro_semibold"
         android:text="@string/SPROUT"
-        android:textStyle="bold"
         android:textColor="@color/black"
-        android:shadowColor="@color/yellow"
-        android:shadowRadius="50.0"
-        android:shadowDx="1.0"
-        android:shadowDy="1.0"
         android:textSize="80dp"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +29,7 @@
         android:text="@string/Welcome"
         android:textColor="@color/black"
         android:textSize="30dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/tan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

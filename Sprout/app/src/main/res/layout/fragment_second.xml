@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/plantback"
+    android:background="@drawable/plantbackfrag2"
     tools:context=".SecondFragment">
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/tan"
         android:text="@string/Back"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/tan"
         android:text="@string/Plant_Diagnosis"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
