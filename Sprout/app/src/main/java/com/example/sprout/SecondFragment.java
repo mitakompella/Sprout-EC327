@@ -48,6 +48,8 @@ public class SecondFragment extends Fragment {
         CustomAdapter customAdapter = new CustomAdapter();
 
         listView.setAdapter(customAdapter);
+
+        //accesses listviewdata.java to pull up article information
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -93,6 +95,8 @@ public class SecondFragment extends Fragment {
         });
 
     }
+
+    //adapter for ListView
 
     private class CustomAdapter extends BaseAdapter {
 
