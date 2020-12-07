@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,6 +21,14 @@ public class fragment_fourth extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    SeekBar seek_bar_sun;
+    SeekBar seek_bar_temp;
+    SeekBar seek_bar_water;
+    TextView sun_res;
+    TextView temp_res;
+    TextView water_res;
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -53,6 +63,67 @@ public class fragment_fourth extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        seek_bar_sun = (SeekBar)getView().findViewById(R.id.sunSeekBar);
+        seek_bar_temp = (SeekBar)getView().findViewById(R.id.tempSeekBar);
+        seek_bar_water = (SeekBar)getView().findViewById(R.id.waterSeekBar);
+        sun_res = (TextView)getView().findViewById(R.id.sun_results);
+        temp_res = (TextView)getView().findViewById(R.id.temp_results);
+        water_res = (TextView)getView().findViewById(R.id.water_results);
+        final int[] values = new int[3];
+
+        seek_bar_sun.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                values[0] = progress;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                //where progress is the value of
+                sun_res.setText(new CompareCare().CompareSun(values[0], ));
+
+            }
+        });
+        seek_bar_temp.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                values[1] = progress;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        seek_bar_water.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                values[2] = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
