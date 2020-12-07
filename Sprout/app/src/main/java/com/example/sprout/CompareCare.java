@@ -1,6 +1,8 @@
 package com.example.sprout;
 
-public class CompareCare {
+import android.app.Application;
+
+public class CompareCare extends Application {
 
     public String CompareSun(int inputSun, int optimalSun){
         int dif = inputSun-optimalSun;

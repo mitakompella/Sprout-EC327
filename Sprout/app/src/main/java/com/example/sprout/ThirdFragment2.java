@@ -33,6 +33,7 @@ public class ThirdFragment2 extends Fragment {
     public static String speciesSelection; //stores type selection
     public static List<Plant> checkWhich = new ArrayList<>(); //stores houseplant data to get ID from selection
     public static String selectedID;
+    public static Plant selection;
 
     @Override
     public View onCreateView(
@@ -71,6 +72,7 @@ public class ThirdFragment2 extends Fragment {
                 @Override
                 public void PlantDataIsLoaded(List<Plant> plants, List<String> keys) {
                     List<String> selections = new ArrayList<>();
+                    checkWhich = plants;
                     for(int i=0; i<plants.size(); i++){
                         selections.add(plants.get(i).getSpecies());
                     }
@@ -127,6 +129,7 @@ public class ThirdFragment2 extends Fragment {
         speciesSelection = (String) selectDropdown2.getSelectedItem();
         for(int i=0;i<checkWhich.size();i++){
             if(checkWhich.get(i).getSpecies().equals(speciesSelection)){
+                selection = checkWhich.get(i);
                 selectedID = checkWhich.get(i).getID();
             }
         }
