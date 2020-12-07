@@ -45,8 +45,8 @@ public class fifth_fragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         Title = (TextView)getView().findViewById(R.id.title);
         Detailed = (TextView)getView().findViewById(R.id.detailed);
-        //Title.setText( FUNCTION TO GET TITLE);
-        //Detailed.setText(FUNCTION TO GET DETAILED);
+        Title.setText(ThirdFragment3.sympSelection.getTitle());
+        Detailed.setText(ThirdFragment3.sympSelection.getDetailed());
     }
 
 

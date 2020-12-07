@@ -41,4 +41,16 @@
         android:textColor="@color/black"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/tan"
+        android:text="@string/Back"
+        android:textColor="@color/black"
+
+        />
+
 </FrameLayout>
