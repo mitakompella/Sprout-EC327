@@ -21,4 +21,5 @@
     <string name="answerPrompt">Select your answer here:</string>
     <string name="question2">What species is the plant?</string>
     <string name="question1">What type of plant is it?</string>
+    <string name="fourth_fragment_label">fourth fragment</string>
 </resources>
