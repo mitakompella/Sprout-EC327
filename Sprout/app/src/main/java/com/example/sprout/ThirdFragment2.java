@@ -28,12 +28,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class ThirdFragment2 extends Fragment {
+    //this class includes the functionality of fragment_third2.xml
+    //it is the second page of the plant diagnosis feature and it asks the user for the species of plant
+    //that they are diagnosing
 
     private Spinner selectDropdown2;
-    public static String speciesSelection; //stores type selection
-    public static List<Plant> checkWhich = new ArrayList<>(); //stores houseplant data to get ID from selection
-    public static String selectedID;
-    public static Plant selection;
+    public static String speciesSelection; //stores species selection
+    public static List<Plant> checkWhich = new ArrayList<>(); //stores database plant data to get later ID from selection
+    public static String selectedID; //stores the ID of the plant selected
+    public static Plant selection; //stores the selected plant object
 
     @Override
     public View onCreateView(
@@ -48,15 +51,17 @@ public class ThirdFragment2 extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //back button functionality
         view.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment2.this)
                         .navigate(R.id.action_ThirdFragment2_to_ThirdFragment);
-
             }
         });
-        //clicking "next" saves selection and takes us to next fragment
+
+        //implementation for the next button, which saves the species selection by running the getAnswer
+        //function and takes us to next fragment
         view.findViewById(R.id.firstNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,9 +69,11 @@ public class ThirdFragment2 extends Fragment {
                 NavHostFragment.findNavController(ThirdFragment2.this).navigate((R.id.action_ThirdFragment2_to_fourthfrag));
             }
         });
-        //display species list
+
         selectDropdown2 = getView().findViewById(R.id.selectDropdown2);
 
+        //if statements checks which plant type user selected and then runs the FirebaseDatabaseHelper
+        //method to extract the plants that match that type in our database
         if(ThirdFragment.typeSelection.equals("Succulents")){
             new FirebaseDatabaseHelper().readSucculents(new FirebaseDatabaseHelper.DataStatus() {
                 @Override
@@ -76,6 +83,7 @@ public class ThirdFragment2 extends Fragment {
                     for(int i=0; i<plants.size(); i++){
                         selections.add(plants.get(i).getSpecies());
                     }
+                    //populates the spinner with the string species of the succulent plant entries
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, selections);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     selectDropdown2.setAdapter(adapter);
@@ -94,8 +102,9 @@ public class ThirdFragment2 extends Fragment {
                 public void DataIsDeleted() { }
             });
         }
+
+        //exact functionality as the if statement above
         else if(ThirdFragment.typeSelection.equals("House Plants")){
-            //run readHouseplants from FirebaseHelper
             new FirebaseDatabaseHelper().readHousePlants(new FirebaseDatabaseHelper.DataStatus() {
                 @Override
                 public void PlantDataIsLoaded(List<Plant> plants, List<String> keys) {
@@ -104,6 +113,7 @@ public class ThirdFragment2 extends Fragment {
                     for(int i=0; i<plants.size(); i++){
                         selections.add(plants.get(i).getSpecies());
                     }
+                    //same functionality as the previous statement
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_spinner_item, selections);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     selectDropdown2.setAdapter(adapter);
@@ -125,6 +135,7 @@ public class ThirdFragment2 extends Fragment {
 
     }
 
+    //function that extracts the currently selected dropdown entry and saves the selection in a global variable
     public void getAnswer(View v){
         speciesSelection = (String) selectDropdown2.getSelectedItem();
         for(int i=0;i<checkWhich.size();i++){

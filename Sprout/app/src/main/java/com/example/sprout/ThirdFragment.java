@@ -28,6 +28,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class ThirdFragment extends Fragment {
+    //this class includes the functionality of fragment_third.xml
+    //it is the first page after clicking plant diagnosis and it asks the user for the type of plant
+    //that they are diagnosing
 
     private Spinner selectDropdown;
     public static String typeSelection; //stores type selection
@@ -44,7 +47,8 @@ public class ThirdFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        //clicking back takes us back to the previous fragment
+
+        //this is the implementation for the back button, takes us to the second fragment
         view.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +65,7 @@ public class ThirdFragment extends Fragment {
             }
         });
 
-       //first question
+       //populates the spinner with the plant type selections
         selectDropdown = getView().findViewById(R.id.selectDropdown);
         List<String> firstQuestion = new ArrayList<>();
         Collections.addAll(firstQuestion, MainActivity.plantTypes);
@@ -71,6 +75,7 @@ public class ThirdFragment extends Fragment {
 
     }
 
+    //this method saves the current selection in the dropdown menu and stores it in a global variable
     public void getAnswer(View v){
         typeSelection = (String) selectDropdown.getSelectedItem();
     }

@@ -3,6 +3,9 @@ package com.example.sprout;
 import android.app.Application;
 
 public class CompareCare extends Application {
+    //this method takes input care data from the fourth fragment's seek bars and the optimal care data
+    //from our database, compares them and outputs a specialized response with respect to the difference
+    //in how the user is caring for their plant and how they should be optimally caring for it
 
     public String CompareSun(int inputSun, int optimalSun){
         int dif = inputSun-optimalSun;

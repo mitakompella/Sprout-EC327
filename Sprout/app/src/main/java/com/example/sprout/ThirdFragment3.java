@@ -16,6 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ThirdFragment3 extends Fragment {
+    //this class includes the functionality of fragment_third3.xml
+    //it is the last of the plant diagnosis feature and it asks the user for any unhealthy symptoms
+    // they notice on the plant that they are diagnosing
+
+    //functionality works very similarly to ThirdFragment2 except with symptom data instead of plant data
 
     private Spinner selectDropdown3;
     public static String symptomSelection; //stores type selection
@@ -35,6 +40,7 @@ public class ThirdFragment3 extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //back button functionality
         view.findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +48,8 @@ public class ThirdFragment3 extends Fragment {
                         .navigate(R.id.action_ThirdFragment3_to_FourthFragment);
             }
         });
+
         //clicking "next" saves selection and takes us to next fragment
-        //uncomment when results page is working
         view.findViewById(R.id.firstNext).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,15 +58,17 @@ public class ThirdFragment3 extends Fragment {
             }
         });
 
-        //display species list
+
         selectDropdown3 = getView().findViewById(R.id.selectDropdown3);
 
+        //populates the symptoms dropdown list with respect to the type selection that was previously selected
+        //by using the FirebaseDatabaseHelper method. very similar to ThirdFragment2's implementation
         if(ThirdFragment.typeSelection.equals("Succulents")){
-            //runs readSuccSymp from FirebaseHelper
             new FirebaseDatabaseHelper().readSuccSymp(new FirebaseDatabaseHelper.DataStatus() {
                 @Override
                 public void SympDataIsLoaded(List<Symptoms> thesymptoms, List<String> keys) {
                     List<String> selections2 = new ArrayList<>();
+                    //adds a selection for if the user's plant does not have any symptoms
                     selections2.add("Plant looks great!");
                     checkWhich = thesymptoms;
                     for(int j = 0; j<thesymptoms.size(); j++){
@@ -118,9 +126,11 @@ public class ThirdFragment3 extends Fragment {
         }
     }
 
+    //method checks for what symptom is currently selected and stores that selection as a global Symptoms object
     public void getAnswer(View v){
         symptomSelection = (String) selectDropdown3.getSelectedItem();
-        if(symptomSelection=="Plant looks great!"){
+        if(symptomSelection.equals("Plant looks great!")){
+            //checks if the users specified that nothing is wrong with the plant
                 sympSelection = null;
             }
             else {

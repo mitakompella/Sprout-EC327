@@ -1,6 +1,9 @@
 package com.example.sprout;
 
 public class Plant {
+    //this is our custom Plant class that includes all plant data that is accessed throughout the app
+
+    //these variables are what are stored in our database
     private String species;
     private String ID;
     private int sun;
@@ -18,6 +21,8 @@ public class Plant {
         this.temp = temp;
     }
 
+    //basic setter and getter functions so we can output more common variable types such as ints and
+    //strings to make working with the data easier
     public String getSpecies() {
         return species;
     }

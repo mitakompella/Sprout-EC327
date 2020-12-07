@@ -1,6 +1,9 @@
 package com.example.sprout;
 
 public class Symptoms {
+    //this class is modelled very similarly to the Plant class but with different variables that are
+    //suited to our symptom data
+
     private String detailed;
     private String title;
     private String name;
