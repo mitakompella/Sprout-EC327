@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="next">Next</string>
+    <string name="app_name">Sprout</string>
+    <string name="SPROUT">Sprout</string>
+    <string name="Welcome">welcome</string>
+    <string name="Back">Back</string>
+    <string name="Plant_Diagnosis">Plant Diagnosis</string>
+    <string name="Pothos">Pothos</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="third_fragment_label">Third Fragment</string>
+    <string name="third_fragment2_label">Third Fragment 2</string>
+    <string name="third_fragment3_label">Third Fragment 3</string>
+=======
 <resources>
     <string name="app_name">Sprout</string>
     <string name="action_settings">Settings</string>
@@ -21,5 +38,5 @@
     <string name="answerPrompt">Select your answer here:</string>
     <string name="question2">What species is the plant?</string>
     <string name="question1">What type of plant is it?</string>
-    <string name="fourth_fragment_label">fourth fragment</string>
+>>>>>>> 366a1c959a34f62af053b79f7558971c6bd51314
 </resources>

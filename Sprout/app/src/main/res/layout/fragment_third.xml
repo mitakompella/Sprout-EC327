@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:onClick="getAnswer"
-        android:text="Next"
+        android:text="@string/next"
         app:iconTint="#FFFFFF"
         android:backgroundTint="@color/tan"
         android:textColor="@color/black"
