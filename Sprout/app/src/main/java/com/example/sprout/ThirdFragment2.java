@@ -94,7 +94,7 @@ public class ThirdFragment2 extends Fragment {
                 public void DataIsDeleted() { }
             });
         }
-           else if(ThirdFragment.typeSelection.equals("House Plants")){
+        else if(ThirdFragment.typeSelection.equals("House Plants")){
             //run readHouseplants from FirebaseHelper
             new FirebaseDatabaseHelper().readHousePlants(new FirebaseDatabaseHelper.DataStatus() {
                 @Override
