@@ -34,9 +34,9 @@ public class SecondFragment extends Fragment {
     Button bt;
     ListView listView;
     ArrayAdapter<String> listViewAdapter;
-    String[] menuItems = {"   Pothos", "   Snake Plant", "   Aloe", "   Jade", "   Burro's Tail", "   Panda Plant"};
-    int[] plantImages = {R.drawable.pothos, R.drawable.snakeplant, R.drawable.aloe, R.drawable.jade, R.drawable.burros, R.drawable.pandaplant};
-    int[] plantInfo = {R.drawable.pothosinfo2, R.drawable.snakeplantinfo3, R.drawable.aloeinfo, R.drawable.jadeplantinfo1, R.drawable.burrosinfo, R.drawable.pandainfo};
+    String[] menuItems = {"   Pothos", "   Snake Plant", "   Spider Plant", "   Aloe", "   Jade", "   Burro's Tail", "   Panda Plant"};
+    int[] plantImages = {R.drawable.pothos, R.drawable.snakeplant, R.drawable.spiderplant, R.drawable.aloe, R.drawable.jade, R.drawable.burros, R.drawable.pandaplant};
+    int[] plantInfo = {R.drawable.pothosinfo2, R.drawable.snakeplantinfo3, R.drawable.spiderplantinfo, R.drawable.aloeinfo, R.drawable.jadeplantinfo1, R.drawable.burrosinfo, R.drawable.pandainfo};
 
     @Override
     public View onCreateView(
