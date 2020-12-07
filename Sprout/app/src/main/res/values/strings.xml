@@ -17,9 +17,9 @@
     <string name="Chooseyourplant">Learn about your plant!</string>
     <string name="questionText" />
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="question3">What seems to be wrong with the plant?</string>
-    <string name="answerPrompt">Select your answer here:</string>
-    <string name="question2">What species is the plant?</string>
-    <string name="question1">What type of plant is it?</string>
-    <string name="fourth_fragment_label">fourth fragment</string>
+    <string name="question3">Which option best describes your plants symptoms?</string>
+    <string name="answerPrompt">Options:</string>
+    <string name="question2">Select your plant species:</string>
+    <string name="question1">Select your plant type:</string>
+    <string name="fourth_fragment_label">fourth_fragment_label</string>
 </resources>

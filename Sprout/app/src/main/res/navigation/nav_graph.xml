@@ -60,9 +60,9 @@
         <action
             android:id="@+id/action_ThirdFragment3_to_ThirdFragment2"
             app:destination="@+id/ThirdFragment2"/>
-        <action
-            android:id="@+id/action_ThirdFragment3_to_FourthFragment"
-            app:destination="@+id/fragment_fourth"/>
+    <action
+        android:id="@+id/action_ThirdFragment3_to_FourthFragment"
+        app:destination="@+id/fragment_fourth"/>
     </fragment>
     <fragment
         android:id="@+id/fragment_fourth"
