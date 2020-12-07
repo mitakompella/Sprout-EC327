@@ -19,6 +19,8 @@ public class ThirdFragment3 extends Fragment {
 
     private Spinner selectDropdown3;
     public static String symptomSelection; //stores type selection
+    public static Symptoms sympSelection;
+    private List<Symptoms> checkWhich;
 
     @Override
     public View onCreateView(
@@ -32,8 +34,8 @@ public class ThirdFragment3 extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        
-        view.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
+
+        view.findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment3.this)
@@ -46,7 +48,7 @@ public class ThirdFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 getAnswer(view);
-                //NavHostFragment.findNavController(ThirdFragment3.this).navigate((R.id.action_ThirdFragment3_to_ThirdFragment));
+                NavHostFragment.findNavController(ThirdFragment3.this).navigate((R.id.action_ThirdFragment3_to_FourthFragment));
             }
         });
 
@@ -60,6 +62,7 @@ public class ThirdFragment3 extends Fragment {
                 public void SympDataIsLoaded(List<Symptoms> thesymptoms, List<String> keys) {
                     List<String> selections2 = new ArrayList<>();
                     selections2.add("Plant looks great!");
+                    checkWhich = thesymptoms;
                     for(int j = 0; j<thesymptoms.size(); j++){
                         selections2.add(thesymptoms.get(j).getName());
                     }
@@ -92,6 +95,7 @@ public class ThirdFragment3 extends Fragment {
                 public void SympDataIsLoaded(List<Symptoms> symptoms, List<String> keys) {
                     List<String> selections2 = new ArrayList<>();
                     selections2.add("Plant looks great!");
+                    checkWhich = symptoms;
                     for(int i=0; i<symptoms.size(); i++){
                         if(symptoms.get(i).getID().contains(ThirdFragment2.selectedID)) {
                             selections2.add(symptoms.get(i).getName());
@@ -116,5 +120,10 @@ public class ThirdFragment3 extends Fragment {
 
     public void getAnswer(View v){
         symptomSelection = (String) selectDropdown3.getSelectedItem();
+        for(int i=0;i<checkWhich.size();i++){
+            if(checkWhich.get(i).getName().equals(symptomSelection)){
+                sympSelection = checkWhich.get(i);
+            }
+        }
     }
 }

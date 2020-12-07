@@ -69,5 +69,8 @@
         android:name="com.example.sprout.fragment_fourth"
         android:label="@string/fourth_fragment_label"
         tools:layout="@layout/fragment_fourth">
+        <action
+            android:id="@+id/action_fragment4_to_ThirdFragment3"
+            app:destination="@+id/ThirdFragment3"/>
     </fragment>
 </navigation>

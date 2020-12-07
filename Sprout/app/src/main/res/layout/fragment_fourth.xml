@@ -7,7 +7,6 @@
 
     tools:context=".fragment_fourth">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="wrap_content"
         android:fontFamily="@font/advent_pro_semibold"
@@ -249,7 +248,7 @@
         android:layout_marginStart="15dp"/>
 
     <Button
-        android:id="@+id/submit_buttom"
+        android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"

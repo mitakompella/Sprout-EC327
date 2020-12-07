@@ -6,7 +6,7 @@ public class CompareCare extends Application {
 
     public String CompareSun(int inputSun, int optimalSun){
         int dif = inputSun-optimalSun;
-        if(dif <= 1 || dif >= -1){
+        if(dif <= 1 && dif >= -1){
             return "Perfect amount of sun! #plant parent goals!";
         }
         else if(dif > 1 && dif < 4){
@@ -26,7 +26,7 @@ public class CompareCare extends Application {
 
     public String CompareTemp(int inputTemp, int optimalTemp) {
         int dif = inputTemp - optimalTemp;
-        if (dif <= 1 || dif >= -1) {
+        if (dif <= 1 && dif >= -1) {
             return "Your plant is thriving at your temperature! Keep up the great plant parenting!";
         }
         else if(dif > 1 && dif < 4){
@@ -46,7 +46,7 @@ public class CompareCare extends Application {
 
     public String CompareWater(int inputWater, int optimalWater) {
         int dif = inputWater - optimalWater;
-        if (dif <= 1 || dif >= -1) {
+        if (dif <= 1 && dif >= -1) {
             return "You’re an A+ plant parent! Your watering schedule is great!";
         }
         else if(dif > 1 && dif < 4){
