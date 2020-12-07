@@ -15,6 +15,8 @@ public class listviewdata extends AppCompatActivity {
     ImageView image;
     ImageView myplantinfo;
 
+    //creates information page for each plant
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

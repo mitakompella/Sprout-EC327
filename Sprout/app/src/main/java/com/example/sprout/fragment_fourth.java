@@ -17,10 +17,10 @@ import android.widget.TextView;
 public class fragment_fourth extends Fragment {
 
     private Button submit_button;
-    private SeekBar seek_bar_sun;
+    private SeekBar seek_bar_sun; //these are each of the SeekBars
     private SeekBar seek_bar_temp;
     private SeekBar seek_bar_water;
-    private TextView sun_res;
+    private TextView sun_res; //these are the text boxes that will show the outputs
     private TextView temp_res;
     private TextView water_res;
     private int count = 0;
@@ -81,7 +81,8 @@ public class fragment_fourth extends Fragment {
         seek_bar_sun.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                values[0] = progress;
+                values[0] = progress; //this will continue updating the first element in the values array as the progress, or the location
+                //of the SeekBar changes. Pressing the button above will lock in their answers
             }
 
             @Override
@@ -95,7 +96,7 @@ public class fragment_fourth extends Fragment {
         seek_bar_temp.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                values[1] = progress;
+                values[1] = progress; //This does the same thing of storing the value inputed by the user
             }
 
             @Override
