@@ -31,6 +31,9 @@ public class ThirdFragment2 extends Fragment {
 
     private Spinner selectDropdown2;
     public static String speciesSelection; //stores type selection
+    public static List<Plant> checkWhich = new ArrayList<>(); //stores houseplant data to get ID from selection
+    public static String selectedID;
+    public static Plant selection;
 
     @Override
     public View onCreateView(
@@ -62,7 +65,6 @@ public class ThirdFragment2 extends Fragment {
             }
         });
         //display species list
-        //BUG WHEN I OPEN THIS PAGE RIP
         selectDropdown2 = getView().findViewById(R.id.selectDropdown2);
 
         if(ThirdFragment.typeSelection.equals("Succulents")){
@@ -70,6 +72,7 @@ public class ThirdFragment2 extends Fragment {
                 @Override
                 public void PlantDataIsLoaded(List<Plant> plants, List<String> keys) {
                     List<String> selections = new ArrayList<>();
+                    checkWhich = plants;
                     for(int i=0; i<plants.size(); i++){
                         selections.add(plants.get(i).getSpecies());
                     }
@@ -79,7 +82,7 @@ public class ThirdFragment2 extends Fragment {
                 }
 
                 @Override
-                public void SympDataIsLoaded(List<Symptoms> symptoms, List<String> keys) { }
+                public void SympDataIsLoaded(List<Symptoms> thesymptoms, List<String> keys) { }
 
                 @Override
                 public void DataIsInserted() { }
@@ -97,6 +100,7 @@ public class ThirdFragment2 extends Fragment {
                 @Override
                 public void PlantDataIsLoaded(List<Plant> plants, List<String> keys) {
                     List<String> selections = new ArrayList<>();
+                    checkWhich = plants;
                     for(int i=0; i<plants.size(); i++){
                         selections.add(plants.get(i).getSpecies());
                     }
@@ -106,7 +110,7 @@ public class ThirdFragment2 extends Fragment {
                 }
 
                 @Override
-                public void SympDataIsLoaded(List<Symptoms> symptoms, List<String> keys) { }
+                public void SympDataIsLoaded(List<Symptoms> thesymptoms, List<String> keys) { }
 
                 @Override
                 public void DataIsInserted() { }
@@ -118,10 +122,16 @@ public class ThirdFragment2 extends Fragment {
                 public void DataIsDeleted() { }
             });
         }
-        
+
     }
 
     public void getAnswer(View v){
         speciesSelection = (String) selectDropdown2.getSelectedItem();
+        for(int i=0;i<checkWhich.size();i++){
+            if(checkWhich.get(i).getSpecies().equals(speciesSelection)){
+                selection = checkWhich.get(i);
+                selectedID = checkWhich.get(i).getID();
+            }
+        }
     }
 }
