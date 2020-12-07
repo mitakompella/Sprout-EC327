@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/plantback">
+    android:background="@drawable/plantbackquizpage">
 
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/yellow"
+        android:backgroundTint="@color/tan"
         android:text="@string/Back"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,6 +52,8 @@
         android:onClick="getAnswer"
         android:text="Next"
         app:iconTint="#FFFFFF"
+        android:backgroundTint="@color/tan"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.90"
@@ -64,7 +66,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/answerPrompt"
-        android:textSize="18sp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/advent_pro_semibold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -73,11 +77,13 @@
 
     <TextView
         android:id="@+id/questionText"
+        android:fontFamily="@font/advent_pro_semibold"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/question3"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/answerPrompt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

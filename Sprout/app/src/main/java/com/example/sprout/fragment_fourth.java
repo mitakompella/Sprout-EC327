@@ -87,7 +87,7 @@ public class fragment_fourth extends Fragment {
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 //where progress is the value of
-                sun_res.setText(new CompareCare().CompareSun(values[0], ));
+                sun_res.setText(new CompareCare().CompareSun(values[0],ThirdFragment2.selection.getSun() ));
 
             }
         });
@@ -117,10 +117,14 @@ public class fragment_fourth extends Fragment {
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
+                temp_res.setText(new CompareCare().CompareTemp(values[1], ThirdFragment2.selection.getTemp()));
+
             }
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
+
+                water_res.setText(new CompareCare().CompareTemp(values[2], ThirdFragment2.selection.getWater()));
 
             }
         });
