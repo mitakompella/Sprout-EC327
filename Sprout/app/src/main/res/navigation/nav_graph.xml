@@ -72,5 +72,11 @@
         <action
             android:id="@+id/action_fragment4_to_ThirdFragment3"
             app:destination="@+id/ThirdFragment3"/>
+        <action
+            android:id="@+id/action_fragment4_to_ThirdFragment2"
+            app:destination="@+id/ThirdFragment2"/>
+        <action
+            android:id="@+id/action_fragment4_to_SecondFragment"
+            app:destination="@+id/SecondFragment"/>
     </fragment>
 </navigation>
