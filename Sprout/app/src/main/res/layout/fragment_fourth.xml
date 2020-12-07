@@ -78,17 +78,16 @@
         android:max="10"
         android:progress="0"
         android:id="@+id/sunSeekBar"/>
-    
+
     <TextView
+        android:id="@+id/sun_results"
         android:layout_width="wrap_content"
-        android:fontFamily="@font/advent_pro_semibold"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:text="results"
-        android:textColor="@color/black"
         android:layout_marginTop="140dp"
-        android:id="@+id/sun_results"/>
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/advent_pro_semibold"
+        android:textColor="@color/black" />
 
 
     <TextView
@@ -149,16 +148,16 @@
         android:max="10"
         android:progress="0"
         android:id="@+id/waterSeekBar"/>
+
     <TextView
+        android:id="@+id/water_results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="310dp"
         android:layout_marginRight="15dp"
         android:fontFamily="@font/advent_pro_semibold"
-        android:text="results"
-        android:textColor="@color/black"
-        android:layout_marginTop="310dp"
-        android:id="@+id/water_results"/>
+        android:textColor="@color/black" />
 
 
     <TextView
@@ -224,15 +223,14 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/temp_results"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:text="results"
-        android:textColor="@color/black"
-        android:fontFamily="@font/advent_pro_semibold"
         android:layout_marginTop="450dp"
-        android:id="@+id/temp_results"/>
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/advent_pro_semibold"
+        android:textColor="@color/black" />
 
 
 
@@ -257,18 +255,6 @@
         android:textColor="@color/black"
         android:layout_gravity="bottom"
         android:layout_marginStart="310dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:backgroundTint="@color/tan"
-        android:text="More Info"
-        android:textColor="@color/black"
-        android:layout_gravity="bottom"
-        android:id="@+id/article_button"
-        android:layout_marginStart="155dp"/>
-    
 
 
 </FrameLayout>

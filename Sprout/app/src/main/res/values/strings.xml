@@ -22,4 +22,5 @@
     <string name="question2">Select your plant species:</string>
     <string name="question1">Select your plant type:</string>
     <string name="fourth_fragment_label">fourth_fragment_label</string>
+    <string name="fifth_fragment_label">fifthFragment</string>
 </resources>

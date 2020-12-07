@@ -49,8 +49,8 @@
             android:id="@+id/action_ThirdFragment2_to_ThirdFragment"
             app:destination="@+id/ThirdFragment"/>
         <action
-            android:id="@+id/action_ThirdFragment2_to_ThirdFragment3"
-            app:destination="@+id/ThirdFragment3"/>
+            android:id="@+id/action_ThirdFragment2_to_fourthfrag"
+            app:destination="@+id/fragment_fourth"/>
     </fragment>
     <fragment
         android:id="@+id/ThirdFragment3"
@@ -58,25 +58,34 @@
         android:label="@string/third_fragment3_label"
         tools:layout="@layout/fragment_third3">
         <action
-            android:id="@+id/action_ThirdFragment3_to_ThirdFragment2"
-            app:destination="@+id/ThirdFragment2"/>
-    <action
         android:id="@+id/action_ThirdFragment3_to_FourthFragment"
         app:destination="@+id/fragment_fourth"/>
+        <action
+            android:id="@+id/action_ThirdFragment3_to_FifthFrag"
+            app:destination="@+id/fragment_fifth"/>
     </fragment>
     <fragment
         android:id="@+id/fragment_fourth"
         android:name="com.example.sprout.fragment_fourth"
         android:label="@string/fourth_fragment_label"
         tools:layout="@layout/fragment_fourth">
+    <action
+        android:id="@+id/action_FourthFragment_to_ThirdFragment3"
+        app:destination="@+id/ThirdFragment3"/>
         <action
-            android:id="@+id/action_fragment4_to_ThirdFragment3"
+            android:id="@+id/action_FourthFragment_to_ThirdFragment2"
+            app:destination="@+id/ThirdFragment2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_fifth"
+        android:name="com.example.sprout.fifth_fragment"
+        android:label="@string/fifth_fragment_label"
+        tools:layout="@layout/fragment_fifth_fragment">
+        <action
+            android:id="@+id/action_fifth_to_ThirdFragment3"
             app:destination="@+id/ThirdFragment3"/>
         <action
-            android:id="@+id/action_fragment4_to_ThirdFragment2"
-            app:destination="@+id/ThirdFragment2"/>
-        <action
-            android:id="@+id/action_fragment4_to_SecondFragment"
+            android:id="@+id/action_Fifth_to_SecondFragment"
             app:destination="@+id/SecondFragment"/>
     </fragment>
 </navigation>

@@ -53,17 +53,10 @@ public class fragment_fourth extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(fragment_fourth.this)
-                        .navigate(R.id.action_fragment4_to_ThirdFragment2);
+                        .navigate(R.id.action_FourthFragment_to_ThirdFragment2);
             }
         });
 
-        view.findViewById(R.id.article_button).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(fragment_fourth.this)
-                        .navigate(R.id.action_fragment4_to_SecondFragment);
-            }
-        });
 
         //submit and next button
         view.findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
@@ -78,7 +71,7 @@ public class fragment_fourth extends Fragment {
                 }
                 else if(count==1){
                     NavHostFragment.findNavController(fragment_fourth.this)
-                            .navigate(R.id.action_fragment4_to_ThirdFragment3);
+                            .navigate(R.id.action_FourthFragment_to_ThirdFragment3);
                     submit_button.setText("Submit");
                     count=0;
                 }

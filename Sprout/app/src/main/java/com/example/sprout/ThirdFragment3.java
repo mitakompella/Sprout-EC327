@@ -39,7 +39,7 @@ public class ThirdFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(ThirdFragment3.this)
-                        .navigate(R.id.action_ThirdFragment3_to_ThirdFragment2);
+                        .navigate(R.id.action_ThirdFragment3_to_FourthFragment);
             }
         });
         //clicking "next" saves selection and takes us to next fragment
@@ -48,7 +48,7 @@ public class ThirdFragment3 extends Fragment {
             @Override
             public void onClick(View view) {
                 getAnswer(view);
-                NavHostFragment.findNavController(ThirdFragment3.this).navigate((R.id.action_ThirdFragment3_to_FourthFragment));
+                NavHostFragment.findNavController(ThirdFragment3.this).navigate((R.id.action_ThirdFragment3_to_FifthFrag));
             }
         });
 
@@ -120,9 +120,14 @@ public class ThirdFragment3 extends Fragment {
 
     public void getAnswer(View v){
         symptomSelection = (String) selectDropdown3.getSelectedItem();
-        for(int i=0;i<checkWhich.size();i++){
-            if(checkWhich.get(i).getName().equals(symptomSelection)){
-                sympSelection = checkWhich.get(i);
+        if(symptomSelection=="Plant looks great!"){
+                sympSelection = null;
+            }
+            else {
+                for (int i = 0; i < checkWhich.size(); i++) {
+                    if (checkWhich.get(i).getName().equals(symptomSelection)) {
+                        sympSelection = checkWhich.get(i);
+                }
             }
         }
     }

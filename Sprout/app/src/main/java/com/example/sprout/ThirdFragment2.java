@@ -61,7 +61,7 @@ public class ThirdFragment2 extends Fragment {
             @Override
             public void onClick(View view) {
                 getAnswer(view);
-                NavHostFragment.findNavController(ThirdFragment2.this).navigate((R.id.action_ThirdFragment2_to_ThirdFragment3));
+                NavHostFragment.findNavController(ThirdFragment2.this).navigate((R.id.action_ThirdFragment2_to_fourthfrag));
             }
         });
         //display species list

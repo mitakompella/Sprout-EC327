@@ -45,8 +45,29 @@ public class fifth_fragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         Title = (TextView)getView().findViewById(R.id.title);
         Detailed = (TextView)getView().findViewById(R.id.detailed);
-        Title.setText(ThirdFragment3.sympSelection.getTitle());
-        Detailed.setText(ThirdFragment3.sympSelection.getDetailed());
+        if(ThirdFragment3.sympSelection==null){
+            Title.setText("#Plant parent goals!");
+            Detailed.setText("You’re doing a great job and your plant loves you and its home! Keep up the great work.");
+        }
+        else {
+            Title.setText(ThirdFragment3.sympSelection.getTitle());
+            Detailed.setText(ThirdFragment3.sympSelection.getDetailed());
+        }
+        view.findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(fifth_fragment.this)
+                        .navigate(R.id.action_fifth_to_ThirdFragment3);
+            }
+        });
+        //clicking "next" saves selection and takes us to next fragment
+        //uncomment when results page is working
+        view.findViewById(R.id.next).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(fifth_fragment.this).navigate((R.id.action_Fifth_to_SecondFragment));
+            }
+        });
     }
 
 

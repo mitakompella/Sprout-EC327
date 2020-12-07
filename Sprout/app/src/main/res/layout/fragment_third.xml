@@ -49,18 +49,16 @@
         android:id="@+id/firstNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:onClick="getAnswer"
-        android:text="@string/next"
-        app:iconTint="#FFFFFF"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="@color/tan"
+        android:onClick="getAnswer"
+        android:text="Next"
         android:textColor="@color/black"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.90"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent" /> 
 
     <TextView
         android:id="@+id/answerPrompt"
